@@ -11,10 +11,13 @@ if (isset($_SESSION["error"])) {
 
 <body>
     <section id="main" class="container">
-        <h1 id="modalOpen"></h1>
+        <button class="button open-button">Logowanie</button>
         <dialog id="modal" class="modal">
-            <h2>Test</h2>
-            <h1 id="modalClose">X</h1>
+            <form action="" method="post">
+                <input type="text" name="login" id="login">
+                <input type="text" name="password" id="password">
+            </form>
+            <button class="button close-button">Zamknij</button>
         </dialog>
         <div class="form_container">
             <form action="functions/form.php" method="post" class="form_box" enctype="multipart/form-data">
@@ -41,14 +44,14 @@ if (isset($_SESSION["error"])) {
 </body>
 <script>
     const modal = document.querySelector("#modal");
-    const modalOpenButton = document.querySelector("#modalOpen");
-    const modalCloseButton = document.querySelector("#modalClose");
+    const openModal = document.querySelector(".open-button");
+    const closeModal = document.querySelector(".close-button");
 
-    modalOpenButton.addEventListener("click", () => {
+    openModal.addEventListener("click", () => {
         modal.showModal();
     });
 
-    modalCloseButton.addEventListener("click", () => {
+    closeModal.addEventListener("click", () => {
         modal.close();
     });
 </script>
