@@ -26,7 +26,6 @@ class Database
         }
     }
 
-
     public function can_login($table_name, $field)
     {
 
