@@ -17,7 +17,7 @@ class Database
     {
 
         try {
-            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", $username, $password);
+            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", "eryk_kucharski", "eryk_kucharskibazadanych");
             // set the PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Connected successfully";
