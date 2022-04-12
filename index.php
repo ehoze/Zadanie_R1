@@ -1,5 +1,6 @@
 <?php
 include_once('functions/header.php');
+include('functions/conn.php');
 if (isset($_SESSION["error"])) {
     $error = $_SESSION["error"];
     unset($_SESSION['error']);
