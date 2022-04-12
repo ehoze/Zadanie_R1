@@ -9,7 +9,7 @@ if (isset($_POST["loguj"])) {
         'login' => $_POST['login'],
         'password' => $_POST['password'],
     );
-    if ($data->can_login("user", $field)) {
+    if ($data->can_login("users", $field)) {
         $_SESSION['login'] = $_POST['login'];
         header("location:../index.php");
     } else {
