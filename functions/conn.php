@@ -42,6 +42,7 @@ class Database
         if ($stmt->rowCount() <= 0) {
             $this->error = "POPRAW";
         } else {
+            header('location:../index.php');
             return true;
         }
     }

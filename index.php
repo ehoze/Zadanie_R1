@@ -15,7 +15,7 @@ if (isset($_SESSION["error"])) {
         <dialog id="modal" class="modal">
             <form action="functions/login.php" method="post">
                 <input type="text" name="login" id="login">
-                <input type="text" name="password" id="password">
+                <input type="password" name="password" id="password">
                 <input type="submit" value="Zaloguj sb" name="loguj">
             </form>
             <button class="button close-button">Zamknij</button>
