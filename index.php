@@ -13,7 +13,7 @@ if (isset($_SESSION["error"])) {
     <section id="main" class="container">
         <button class="button open-button">Logowanie</button>
         <dialog id="modal" class="modal">
-            <form action="functions/conn.php" method="post">
+            <form action="functions/login.php" method="post">
                 <input type="text" name="login" id="login">
                 <input type="text" name="password" id="password">
                 <input type="submit" value="Zaloguj sb" name="loguj">
