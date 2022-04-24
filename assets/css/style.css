@@ -28,7 +28,7 @@
 }
 
 body {
-    background: lightblue;
+    background: linear-gradient(15deg, #3E7CB1, #054A91);
 }
 /* GLOBALS */
 .container{
@@ -43,7 +43,7 @@ body {
 .form_container{
     position: relative;
     height: 90vh;
-    width: 50%;
+    width: 70%;
 }
 
 .form_box{
@@ -55,6 +55,7 @@ body {
     justify-content: center;
     box-shadow: 1px 0px 20px rgba(0, 0, 0, .4);
     height: 80%;
+    width: 100%;
 }
 
 .form_box label{
@@ -63,7 +64,7 @@ body {
 }
 
 .form_box input{
-    width: 300px;
+    width: 90%;
     height: 40px;
     border: none;
     text-align: center;
@@ -75,7 +76,7 @@ body {
 }
 
 
-.form_box input[name=attachment]{
+.form_box input[name=image]{
     box-shadow: none;
 }
 
@@ -88,7 +89,7 @@ body {
     color: white;
 }
 
-.form_box label[for=attachment]{
+.form_box label[for=image]{
     margin: 25px 0px;
     font-size: 1.2rem;
     text-align: center;
@@ -105,10 +106,109 @@ body {
     outline: none;
 }
 
+.open-button{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+    box-shadow: none;
+    background-color: black;
+    color: white;
+    transition: .2s all;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color:rgba(33, 34, 39, .8);
+}
+
+.dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    border: none;
+}
+
+.dialog input{
+    margin: 10px 0px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, .4);
+    background-color: #3E7CB1;
+    transition: .3s all;
+    border-bottom: 2px solid transparent;
+}
+
+.dialog .btn-primary, dialog .close-button{
+    /* margin-top: 20px; */
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+    box-shadow: none;
+    background-color: black;
+    color: white;
+    transition: .2s all;
+}
+
+dialog .close-button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10px);
+}
+
+.dialog .btn-primary:hover, dialog .close-button:hover{
+    background-color:rgb(24, 24, 24);
+}
+
+/* DATA.php */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr{
+    background-color: #2b2b2b; 
+    color: wheat;  
+}
+  
+tr:nth-child(even) {background-color: #111111;}
+
+table img{
+    max-width: 150px;
+    height: auto;
+}
+
 /* MEDIAS */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 900px) {
     body{
         background: linear-gradient(15deg, #3E7CB1, #054A91);
-    }    
+    }   
+    .form_box input{
+        width: 400px;
+    } 
 }
 /* END MEDIAS */

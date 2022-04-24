@@ -1,6 +1,6 @@
 <?php
+// session_start();
 include '../functions/conn.php';
-session_start();
 
 $data = new Database;
 
@@ -11,9 +11,15 @@ if (isset($_POST["loguj"])) {
     );
     if ($data->can_login("users", $field)) {
         $_SESSION['login'] = $_POST['login'];
-        header("location:../index.php");
+        echo $_POST['login'];
+        $_SESSION['error'] = '';
+        $_SESSION['logged'] = true;
+        header("location:../data.php");
     } else {
         $message = $data->error;
+        echo $_POST['login'] . " " . $_POST['password'];
+        header("location:../index.php");
+        $_SESSION['logged'] = false;
+        $_SESSION['error'] = '<label>Błędne dane</label>';
     }
 }
-header('location:../index.php');
