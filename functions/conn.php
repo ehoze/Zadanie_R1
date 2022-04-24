@@ -6,6 +6,10 @@ class Database
     public $error;
     public $conn;
 
+    // public $servername = "db4free.net";
+    // public $db = "eryk_kucharski";
+    // public $username = "eryk_kucharski";
+    // public $password = "eryk_kucharskibazadanych";
     // public function __construct()
     // {
     // $this->dbConnect();
@@ -14,7 +18,7 @@ class Database
     public function dbConnect()
     {
         try {
-            $conn = new PDO("mysql:host=localhost;dbname=r1", "root", "");
+            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", "eryk_kucharski", "eryk_kucharskibazadanych");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // return $this->con;
         } catch (PDOException $e) {
@@ -30,7 +34,7 @@ class Database
         $password = $data['password'];
 
         try {
-            $conn = new PDO("mysql:host=localhost;dbname=r1", "root", "");
+            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", "eryk_kucharski", "eryk_kucharskibazadanych");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // return $this->con;
         } catch (PDOException $e) {
@@ -62,7 +66,7 @@ class Database
         $fileName = $data['file_name'];
         $fileType = $data['file_type'];
         try {
-            $conn = new PDO("mysql:host=localhost;dbname=r1", "root", "");
+            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", "eryk_kucharski", "eryk_kucharskibazadanych");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // return $this->con;
         } catch (PDOException $e) {
@@ -108,7 +112,7 @@ class Database
     {
 
         try {
-            $conn = new PDO("mysql:host=localhost;dbname=r1", "root", "");
+            $conn = new PDO("mysql:host=db4free.net;dbname=eryk_kucharski", "eryk_kucharski", "eryk_kucharskibazadanych");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // return $this->con;
         } catch (PDOException $e) {
